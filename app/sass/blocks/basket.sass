@@ -1,0 +1,340 @@
+.basket
+	background: linear-gradient(180deg, #AFE4FF 0%, rgba(175, 228, 255, 0) 100%)
+	padding: 50px 0
+	position: relative
+	.cloud1
+		position: absolute
+		left: 0
+		top: 15%
+		transform: translate(-50%,0)
+		z-index: 1
+		@include mq($max-width: 700px)
+			opacity: .5
+	.cloud2
+		top: 60%
+		transform: translate(50%,0)
+		z-index: 1
+		right: 0
+		position: absolute
+		z-index: 1
+		@include mq($max-width: 700px)
+			opacity: .5
+	.butterfly1
+		top: 60%
+		left: 2%
+		position: absolute
+		z-index: 1
+		@include mq($max-width: 1500px)
+			display: none
+	.butterfly2
+		position: absolute
+		z-index: 1
+		right: 0
+		top: 15%
+		@include mq($max-width: 1500px)
+			display: none
+	.caption
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 0
+		&__title
+			text-transform: none
+	.backlink
+		font: 400 17px 'Proxima', sans-serif
+		color: $blue2
+		@include mq($max-width: 700px)
+			font-size: 14px
+		&:hover
+			color: $green2
+	.line
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		padding: 50px 0
+		border-bottom: 1px solid $blue5
+		@include mq($max-width: 700px)
+			padding: 25px 0 0
+		&:last-child
+			border-bottom: none
+	&__img
+		display: block
+		width: 100%
+		height: auto
+	.block
+		padding: 0 10px
+		width: 20%
+		display: flex
+		flex-direction: column
+		align-items: center
+		@include mq($max-width: 1000px)
+			width: 25%
+		@include mq($max-width: 700px)
+			width: 50%
+			margin-bottom: 25px
+		&:first-child
+			@include mq($max-width: 1000px)
+				display: none
+		&__title
+			text-align: center
+			font: 300 17px 'Proxima', sans-serif
+			margin-bottom: 50px
+			@include mq($max-width: 1000px)
+				margin-bottom: 25px
+			@include mq($max-width: 700px)
+				font-size: 15px
+				&:after
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					background: $blue2
+		&__name
+			font: 300 21px 'Proxima', sans-serif
+			@include mq($max-width: 700px)
+				font-size: 15px
+		&__price
+			font: 300 21px 'Proxima', sans-serif
+			@include mq($max-width: 700px)
+				font-size: 15px
+			&:after
+				content: '\f158'
+				display: inline-block
+				margin-left: 10px
+				font-size: 18px
+				font-family: fontello
+				@include mq($max-width: 700px)
+					font-size: 13px
+	.counter
+		display: flex
+		align-items: center
+		&__field
+			text-align: center
+			margin: 0 12px
+			width: 40px
+			background: none
+		&__btn
+			cursor: pointer
+			width: 40px
+			height: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			font: 400 24xp 'Proxima', sans-serif
+			border-radius: 5px
+			background: $white
+			transition: all .3s ease-out
+			&:hover
+				background: $green2
+				color: $white
+	.summ
+		font: 400 21px 'Proxima', sans-serif
+		text-align: right
+		strong
+			color: $green5
+
+.basket-wrap
+	background: linear-gradient(180deg, rgba(216, 239, 250, 0.06) 0%, #DAF0FB 53.64%, #DAF0FB 53.65%, rgba(219, 240, 251, 0.03) 100%)
+	position: relative
+	.container
+		position: relative
+		z-index: 2
+	.tree1
+		position: absolute
+		left: 0
+		bottom: 0
+		transform: translate(-30%, 0)
+		z-index: 1
+		@include mq($max-width: 1700px)
+			opacity: 0.5
+			transform: translate(-50%, 0)
+		@include mq($max-width: 1500px)
+			transform: translate(-75%, 0)
+		@include mq($max-width: 1000px)
+			display: none
+	.tree2
+		position: absolute
+		right: 0
+		bottom: 0
+		transform: translate(55%, 0)
+		z-index: 1
+		@include mq($max-width: 1700px)
+			opacity: 0.5
+			transform: translate(60%, 0)
+		@include mq($max-width: 1500px)
+			transform: translate(70%, 0)
+		@include mq($max-width: 1000px)
+			display: none
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 125px
+		background: url($imgUrl+'grass2.png') repeat-x center bottom / contain
+
+.order
+	.caption
+		margin-bottom: 40px
+		&__title
+			text-align: left
+			text-transform: none
+	.form-title
+		margin-bottom: 40px
+		font: 700 21px 'Proxima', sans-serif
+		@include mq($max-width: 550px)
+			margin-bottom: 20px
+	.form-subtitle
+		margin-bottom: 40px
+		font: 700 17px 'Proxima', sans-serif
+		@include mq($max-width: 550px)
+			margin-bottom: 20px
+	.form
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 50px
+		&.full-info
+			align-items: flex-start
+			.form-item
+				margin-bottom: 30px
+			.form__label
+				text-align: right
+				width: 150px
+				@include mq($max-width: 1000px)
+					text-align: left
+			.form__input
+				width: 325px
+				@include mq($max-width: 550px)
+					width: 100%
+				&.mini
+					width: 155px
+					margin-top: 10px
+					@include mq($max-width: 550px)
+						width: 48%
+			.inputs
+				width: 325px
+				justify-content: space-between
+				@include mq($max-width: 550px)
+					width: 100%
+		&.pay
+			align-items: flex-start
+			img
+				display: block
+				width: 100%
+				height: auto
+				@include mq($max-width: 550px)
+					margin-top: 20px
+		&-left,
+		&-right
+			max-width: 50%
+			@include mq($max-width: 1000px)
+				max-width: 100%
+				width: 100%
+		&__btn
+			font-size: 17px
+		&-item
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+			@include mq($max-width: 550px)
+				flex-direction: column
+				align-items: flex-start
+				margin-bottom: 10px
+			&.top
+				align-items: flex-start
+				.form__label
+					line-height: 2
+		.inputs
+			display: flex
+			flex-wrap: wrap
+		&__label
+			margin-right: 20px
+			width: 160px
+			font: 400 17px 'Proxima', sans-serif
+			@include mq($max-width: 550px)
+				width: 100%
+				margin-right: 0
+				margin-bottom: 10px
+			sup
+				color: #FF0000
+		&__input
+			height: 38px
+			width: 265px
+			font: 400 17px 'Proxima', sans-serif
+			padding: 0 15px
+			border: 1px solid $white
+			transition: all .3s ease-out
+			@include mq($max-width: 550px)
+				width: 100%
+			&::placeholder
+				color: #B1B1B1
+			&:hover,
+			&:focus
+				border-color: $blue2
+
+	.radio
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		user-select: none
+		cursor: pointer
+		@include mq($max-width: 550px)
+			margin-bottom: 10px
+		&__text
+			width: 100%
+			padding-left: 50px
+			font: 17px 'Proxima', sans-serif
+			margin-top: 10px
+			@include mq($max-width: 550px)
+				font-size: 12px
+		&__input
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			cursor: pointer
+			&:checked ~ .radio__mark:after
+				background: $green2
+		&__mark
+			font: 17px 'Proxima', sans-serif
+			color: $black
+			display: flex
+			align-items: center
+			padding-left: 50px
+			@include mq($max-width: 550px)
+				font-size: 12px
+			img
+				margin-right: 10px
+				@include mq($max-width: 550px)
+					max-width: 60px
+					max-height: 40px
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				border: 1px solid $gray2
+				width: 24px
+				height: 24px
+				border-radius: 100%
+				left: 0
+				top: 50%
+				transform: translate(0, -50%)
+			&:after
+				content: ''
+				width: 14px
+				height: 14px
+				background: $gray2
+				position: absolute
+				left: 0
+				top: 50%
+				border-radius: 100%
+				transform: translate(44%, -50%)
+				display: block
+
+
+

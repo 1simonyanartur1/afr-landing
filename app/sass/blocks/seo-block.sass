@@ -1,0 +1,68 @@
+.seo-block
+	padding: 50px 0
+	position: relative
+	.tree1
+		position: absolute
+		left: 0
+		bottom: 50%
+		transform: translate(-60%, 0)
+		z-index: 1
+		@include mq($max-width: 1700px)
+			transform: translate(-75%, 0)
+		@include mq($max-width: 1500px)
+			opacity: 0.5
+			transform: translate(-75%, 0)
+		@include mq($max-width: 1000px)
+			display: none
+	.tree2
+		position: absolute
+		right: 0
+		bottom: 0
+		transform: translate(65%, 0)
+		z-index: 1
+		@include mq($max-width: 1700px)
+			transform: translate(75%, 0)
+		@include mq($max-width: 1500px)
+			opacity: 0.5
+			transform: translate(80%, 0)
+		@include mq($max-width: 1000px)
+			display: none
+	.container
+		position: relative
+		z-index: 2
+	&__title
+		font: 700 24px/2 'Proxima', sans-serif
+		color: $blue2
+		border-bottom: 1px solid $green2
+		margin-bottom: 30px
+		padding-right: 30px
+		position: relative
+		transition: all .3s ease-out
+		@include mq($max-width: 550px)
+			font-size: 18px
+		@include mq($max-width: 550px)
+			font-size: 16px
+		&:hover
+			color: $green2
+			cursor: pointer
+		&.active
+			&:after
+				transform: rotate(270deg)
+		&:after
+			content: '\f006'
+			display: inline-block
+			margin-left: auto
+			font-family: fontello
+			color: $blue2
+			font-size: 20px
+			position: absolute
+			transition: all .3s ease-out
+			right: 10px
+			transform: rotate(90deg)
+	&-inner
+		clear: both
+	.text-container
+		h2,
+		h3,
+		h4
+			color: $blue2 

@@ -1,0 +1,28 @@
+- var imgUrl = '../img/';
+ 
+doctype
+html
+	include ../blocks/head.pug
+		title AFR
+	body
+		include ../blocks/header.pug
+ 
+		.page-container
+			section.order-conf
+				img.tree1(src=imgUrl+"tree2.png", alt="")
+				img.tree2(src=imgUrl+"tree1.png", alt="")
+				.container
+					.text-container
+						h1 Спасибо за заказ!
+						p Ваш заказ № <span>1</span> на сумму <span>2500</span> <span class="icon-rouble"></span> принят в обработку.
+						p В ближайшее время с вами свяжется менеджер для оформления заказа. Если не удастся связать с вами по телефону, вы получите уведомление на почту. Плагин для ведения клиентской базы с заказами в админ-панели, уведомление об оплаченном заказе на почту.
+					ul.btns
+						li
+							a.btn2(href="index.html") Вернуться на главную
+
+
+
+
+		include ../blocks/footer.pug
+
+		include ../blocks/scripts.pug

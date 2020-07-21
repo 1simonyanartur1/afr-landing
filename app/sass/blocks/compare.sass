@@ -1,0 +1,120 @@
+.compare
+	padding: 90px 0
+	position: relative
+	@include mq($max-width: 1000px)
+		padding: 40px 0
+	.grass
+		position: absolute
+		left: 0
+		top: 40%
+		transform: translate(-65%,0)
+		z-index: 1
+		@include mq($max-width: 1700px)
+			transform: translate(-75%,0)
+		@include mq($max-width: 1200px)
+			display: none
+	.container
+		position: relative
+		z-index: 2
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 860px
+		position: absolute
+		z-index: -1
+		left: 0
+		background: linear-gradient(180deg, rgba(216, 239, 250, 0.06) 0%, #DAF0FB 53.64%, #DAF0FB 53.65%, rgba(219, 240, 251, 0.03) 100%)
+		top: -5%
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		height: 1990px
+		position: absolute
+		z-index: -1
+		left: 0
+		background: linear-gradient(180deg, rgba(216, 239, 250, 0.06) 0%, #DAF0FB 53.64%, #DAF0FB 53.65%, rgba(219, 240, 251, 0.03) 100%)
+		top: 50%
+	.caption
+		margin-bottom: 150px
+		@include mq($max-width: 1000px)
+			margin-bottom: 50px
+	.inner
+		display: flex
+		@include mq($max-width: 1000px)
+			flex-wrap: wrap
+	.item
+		background: $white
+		border: 1px solid #DADADA
+		text-align: center
+		position: relative
+		@include mq($max-width: 1000px)
+			width: 100%
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			width: 84px
+			height: 84px
+			background: $blue
+			border-radius: 100%
+			margin: 0 auto
+			transform: translate(-50%, -50%)
+			box-shadow: 0 0 0 40px $white
+			z-index: 1
+			@include mq($max-width: 1000px)
+				display: none
+		&:nth-child(2)
+			transform: scale(1.05) !important
+			box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.25)
+			border-radius: 0px 0px 10px 10px
+			position: relative
+			z-index: 4
+			@include mq($max-width: 1000px)
+				transform: scale(1)
+				box-shadow: none
+			.item__img
+				margin-bottom: -20px
+				max-width: 110%
+				left: -5%
+		&:nth-child(3)
+			.item__img
+				margin-top: -55px
+		&__price
+			margin-bottom: 35px
+			font: 700 24px 'Proxima', sans-serif
+			text-align: center
+			display: inline-block
+			@include mq($max-width: 550px)
+				margin-bottom: 10px
+			&:after
+				content: '\f158'
+				display: inline-block
+				margin-left: 10px
+				font-family: fontello
+				font-size: 20px
+		&__img
+			display: block
+			max-width: 100%
+			margin: 0 auto
+			position: relative
+			z-index: 2
+			margin-top: -20px
+			@include mq($max-width: 1000px)
+				display: none
+		&-line
+			background: $green2
+			padding: 25px 20px
+			position: relative
+			z-index: 3
+			margin-bottom: 15px
+		&__title
+			text-align: center
+			color: $white
+			font: 700 21px 'Proxima', sans-serif
+		.text-container
+			padding: 0 41px 95px
+			@include mq($max-width: 1000px)
+				padding: 25px

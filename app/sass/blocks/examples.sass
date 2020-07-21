@@ -1,0 +1,99 @@
+.examples
+	padding: 25px 0
+	position: relative
+	.cloud
+		position: absolute
+		right: 0
+		top: -50px
+		transform: translate(60%, 0)
+		z-index: 1
+	.container
+		position: relative
+		z-index: 2
+	.slider
+		position: relative
+		z-index: 2
+		@include mq($max-width: 1000px)
+			margin-bottom: 50px
+		@include mq($max-width: 550px)
+			margin-bottom: 0
+		.slick-arrow
+			position: absolute
+			top: calc(50% - 32px)
+			z-index: 3
+			width: 84px
+			height: 84px
+			font-size: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 100%
+			background: $white
+			cursor: pointer
+			transition: all .3s ease-out
+			@include mq($max-width: 1000px)
+				background: $green2
+				color: $white
+			@include mq($max-width: 550px)
+				width: 40px
+				height: 40px
+				font-size: 20px
+				top: calc(50% - 15px)
+			&:hover
+				background: $green2
+				color: $white
+		.icon-left-open
+			left: 0
+			transform: translate(-50%, -50%)
+			@include mq($max-width: 1200px)
+				transform: translate(0, -50%)
+				left: 10px
+			@include mq($max-width: 550px)
+				left: 5px
+		.icon-right-open
+			transform: translate(50%, -50%)
+			right: 0
+			@include mq($max-width: 1200px)
+				transform: translate(0, -50%)
+				right: 10px
+			@include mq($max-width: 550px)
+				right: 5px
+	.slide
+		&-top
+			display: flex
+			justify-content: space-between
+			@include mq($max-width: 1000px)
+				flex-wrap: wrap
+		&-block
+			width: 49.5%
+			position: relative
+			@include mq($max-width: 1000px)
+				width: 100%
+			&:hover
+				.icon-search
+					opacity: 1
+				.slide__text
+					color: $green2
+		.icon-search
+			position: absolute
+			font-size: 30px
+			color: $white
+			right: 20px
+			bottom: 60px
+			z-index: 3
+			opacity: 0
+			transition: all .3s ease-out
+		&__img
+			display: block
+			width: 100%
+			height: auto
+			transition: all .3s ease-out
+		&__text
+			font: 600 26px 'Proxima', sans-serif
+			color: $gray3
+			padding: 10px
+			text-align: center
+			transition: all .3s ease-out
+			@include mq($max-width: 550px)
+				font-size: 16px
+				padding: 5px

@@ -1,0 +1,152 @@
+- var imgUrl = '../img/';
+      
+doctype
+html
+	include ../blocks/head.pug
+		title AFR
+	body
+		include ../blocks/header.pug
+ 
+		.page-container
+			form.basket-wrap(action="#")
+				img.tree1(src=imgUrl+"tree1.png", alt="")
+				img.tree2(src=imgUrl+"tree2.png", alt="")
+				section.basket
+					img.cloud1(src=imgUrl+"cloud1.png", alt="")
+					img.cloud2(src=imgUrl+"cloud1.png", alt="")
+					img.butterfly1(src=imgUrl+"butterfly2.png", alt="")
+					img.butterfly2(src=imgUrl+"butterfly3.png", alt="")
+					.container
+						.caption
+							h1.caption__title Корзина
+							a.backlink(href="index.html") Вернуться на главную
+						ul.list
+							li.line
+								.block
+									img.basket__img(src=imgUrl+"basket-img.jpg", alt="")
+								.block
+									h2.block__title Наименование
+									h2.block__name Зеленая трава
+								.block
+									h2.block__title Цена
+									h2.block__price 4200
+								.block
+									h2.block__title Количество
+									.counter
+										button.counter__btn.minus -
+										input.counter__field(type="text" value="1")
+										button.counter__btn.plus +
+								.block
+									h2.block__title Сумма
+									h2.block__price 8400
+							li.line
+								.block
+									img.basket__img(src=imgUrl+"basket-img.jpg", alt="")
+								.block
+									h2.block__title Наименование
+									h2.block__name Зеленая трава
+								.block
+									h2.block__title Цена
+									h2.block__price 4200
+								.block
+									h2.block__title Количество
+									.counter
+										button.counter__btn.minus -
+										input.counter__field(type="text" value="1")
+										button.counter__btn.plus +
+								.block
+									h2.block__title Сумма
+									h2.block__price 8400
+						.summ
+							<strong>Итого:</strong> 16 800 рублей
+				
+				section.order
+					.container
+						.caption
+							h2.caption__title Оформить заказ
+						h3.form-title Контактные данные
+						.form
+							.form-left
+								.form-item
+									label.form__label Имя
+									input.form__input(type="text")
+								.form-item
+									label.form__label Фамилия
+									input.form__input(type="text")
+								.form-item
+									label.form__label Отчество
+									input.form__input(type="text")
+								.form-item
+									label.form__label Почта
+									input.form__input(type="text")
+								.form-item
+									label.form__label Телефон
+									input.form__input(type="tel")
+						h3.form-title Адрес и способ доставки
+						h3.form-subtitle Выбор способа доставки
+						.form.full-info
+							.form-left
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio1" checked)
+										span.radio__mark Курьерская доставка
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio1")
+										span.radio__mark <img src="../img/basket/Boxberry.png"> Boxberry
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio1")
+										span.radio__mark <img src="../img/basket/cdek.png"> CDEK Эл дверь-дверь
+										p.radio__text Стоимость доставки составит: 250 руб.
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio1")
+										span.radio__mark <img src="../img/basket/cdek.png"> CDEK Эл Супер-экспресс до 18
+										p.radio__text Стоимость доставки составит: 400 руб.
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio1")
+										span.radio__mark <img src="../img/basket/cdek.png"> CDEK Эл Экономичный экспресс склад-склад
+										p.radio__text Доставка либо не осуществляется, либо равна нулю
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio1")
+										span.radio__mark <img src="../img/basket/pr.png"> Почта России
+							.form-right
+								.form-item
+									label.form__label <sup>*</sup>Почтовый индекс
+									input.form__input(type="text")
+								.form-item
+									label.form__label Область
+									input.form__input(type="text")
+								.form-item
+									label.form__label Город
+									input.form__input(type="text")
+								.form-item.top
+									label.form__label Адрес
+									.inputs
+										input.form__input(type="text" placeholder="Улица")
+										input.form__input.mini(type="number" placeholder="Дом")
+										input.form__input.mini(type="number" placeholder="Квартира")
+								.form__text
+						h3.form-subtitle Оплата
+						.form.pay
+							.form-left
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio2")
+										span.radio__mark Онлайн оплата банковской картой
+								.form-item
+									label.radio
+										input.radio__input(type="radio" name="radio2")
+										span.radio__mark Банковский или почтовый перевод
+							.form-right
+								img.logos(src=imgUrl+"logos.png", alt="")
+						button.btn1.form__btn Оформить заказ
+
+
+
+		include ../blocks/footer.pug
+
+		include ../blocks/scripts.pug

@@ -1,0 +1,197 @@
+// Colors
+$white: #fff
+$black: #000
+
+$gray1: #3E3A3C
+$gray2: #D8D8D8
+$gray3: #2F2F2F
+$gray4: #7C7C7C
+
+$blue: #B1E4FF
+$blue2: #003053
+$blue3: #DFF2FB
+$blue4: #005E8A
+$blue5: #267195
+
+$green: #72921D
+$green2: #98C02E
+$green3: #68841E
+$green4: #5A5A5A
+$green5: #03692B
+
+$imgUrl: '../img/'
+
+// Reset style
+*
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	outline: 0
+	border: 0
+	&:before,
+	&:after 
+		padding: 0
+		margin: 0
+		outline: 0
+		border: 0
+
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] 
+	-webkit-appearance: button /* 2 */
+	background: none
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="submit"],
+input[type="number"],
+input[type="search"]
+	-webkit-appearance: none 
+
+
+ul,
+ol,
+nav 
+	list-style-type: none
+	li
+		list-style-type: none
+
+a
+	display: inline-block
+	text-decoration: none
+	transition: all .3s ease-out
+
+html,
+body
+	color: $blue2
+	// background: $blue
+	height: 100%
+	display: flex
+	flex-direction: column
+
+// body,
+// .change-scroll
+// 	&::-webkit-scrollbar
+// 		width: 10px
+// 	&::-webkit-scrollbar-track
+// 		background: $blue2
+// 	&::-webkit-scrollbar-thumb
+// 		background: $blue
+// 	&::-webkit-scrollbar-thumb:hover
+// 		background: $dark
+
+.page-container
+	width: 100%
+	flex: 1 0 auto
+	height: auto
+	position: relative
+	overflow: hidden
+
+.container
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+	height: auto
+	// @include mq($max-width: 1500px)
+	// 	max-width: 1200px
+	// @include mq($max-width: 380px)
+	// 	padding: 0 5px
+
+.site-block
+	padding: 50px 0
+
+.caption
+	margin-bottom: 40px
+	&__title
+		text-align: center
+		text-transform: uppercase
+		font: 700 34px 'Proxima', sans-serif
+		color: $blue2
+		margin-bottom: 10px
+		@include mq($max-width: 700px)
+			font-size: 24px
+		@include mq($max-width: 550px)
+			font-size: 20px
+		sup
+			font-size: 20px
+			@include mq($max-width: 550px)
+				font-size: 14px
+	span
+		color: $green2
+	&__text
+		text-align: center
+		font: 400 14px 'Proxima', sans-serif
+		color: $blue2
+
+.btn1
+	padding: 21px 60px
+	background: $green2
+	text-align: center
+	color: $white
+	font: 700 27px 'Proxima', sans-serif
+	border-top-right-radius: 38px
+	border-bottom-left-radius: 38px
+	cursor: pointer
+	transition: all .3s ease-out !important
+	@include mq($max-width: 700px)
+		padding: 21px
+		font-size: 17px
+	&:hover
+		background: $blue2
+		border-radius: 38px
+		border-top-right-radius: 0
+		border-bottom-left-radius: 0
+.btn2
+	padding: 21px
+	background: $green2
+	text-align: center
+	color: $white
+	font: 700 17px 'Proxima', sans-serif
+	border-top-right-radius: 38px
+	border-bottom-left-radius: 38px
+	transition: all .3s ease-out !important
+	cursor: pointer
+	&:hover
+		background: $blue2
+		border-radius: 38px
+		border-top-right-radius: 0
+		border-bottom-left-radius: 0
+
+
+
+.slick-dots
+	text-align: center
+	@include mq($max-width: 1000px)
+		position: absolute
+		bottom: -50px
+		width: 100%
+	@include mq($max-width: 550px)
+		bottom: -35px
+	button
+		font-size: 0
+		width: 24px
+		height: 24px
+		background: $gray4
+		border-radius: 100%
+		transition: all .3s ease-out
+		cursor: pointer
+		@include mq($max-width: 550px)
+			width: 12px
+			height: 12px
+		&:hover
+			background: $gray2
+	li
+		display: inline-block
+		margin: 5px
+		&.slick-active
+			button
+				background: $green2
+				box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+
+.blocks-wrap1
+	background: url($imgUrl+'about/bg.png') no-repeat center bottom / cover

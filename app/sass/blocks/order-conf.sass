@@ -1,0 +1,55 @@
+.order-conf
+	background: linear-gradient(180deg, rgba(216, 239, 250, 0.06) 0%, #DAF0FB 53.64%, #DAF0FB 53.65%, rgba(219, 240, 251, 0.03) 100%)
+	padding: 300px 0
+	position: relative
+	@include mq($max-width: 1500px)
+		padding: 150px 0
+		min-height: calc(100vh - 200px)
+	@include mq($max-width: 550px)
+		padding: 50px 0
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		z-index: 2
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background: url($imgUrl+'mainblock/grass.png') repeat-x left bottom / contain
+		height: 125px
+		margin-bottom: -40px
+		@include mq($max-width: 1500px)
+			margin-bottom: -20px
+		@include mq($max-width: 550px)
+			margin-bottom: -10px
+	.tree1
+		position: absolute
+		right: 0
+		bottom: 0
+		transform: translate(50%, 0)
+		display: block
+		max-height: 100%
+		@include mq($max-width: 1000px)
+			display: none
+	.tree2
+		position: absolute
+		left: 0
+		bottom: 0
+		transform: translate(-50%, 0)
+		max-height: 100%
+		display: block
+		@include mq($max-width: 1000px)
+			display: none
+	.container
+		max-width: 890px
+		position: relative
+		z-index: 2
+	.text-container
+		text-align: center
+		span
+			font-size: 18px
+		.icon-rouble
+			font-size: 17px
+	.btns
+		text-align: center

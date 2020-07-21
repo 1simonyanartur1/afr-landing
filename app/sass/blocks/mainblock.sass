@@ -1,0 +1,246 @@
+.mainblock
+	position: relative
+	padding: 125px 0 200px
+	background: url($imgUrl+'mainblock/bg.jpg') no-repeat center center / cover
+	@include mq($max-width: 1000px)
+		padding: 50px 0 150px
+	@include mq($max-width: 700px)
+		padding: 50px 0
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		z-index: 2
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background: url($imgUrl+'mainblock/grass.png') repeat-x left bottom / contain
+		height: 125px
+	&__home
+		position: absolute
+		height: 100%
+		width: auto
+		left: 0
+		top: 0
+		z-index: 1
+		@include mq($max-width: 1700px)
+			transform: translate(-30%,0)
+		@include mq($max-width: 1500px)
+			display: none
+	.container
+		position: relative
+	.inner
+		max-width: 800px
+		position: relative
+		z-index: 2
+		@include mq($max-width: 700px)
+			text-align: center
+	span
+		color: $green2
+	h1
+		color: $gray1
+		font: 700 38px 'Gotham', sans-serif
+		margin-bottom: 20px
+		letter-spacing: 0.075em
+		@include mq($max-width: 700px)
+			font-size: 28px
+	h2
+		font: 300 24px 'Gotham', sans-serif
+		margin-bottom: 35px
+		@include mq($max-width: 700px)
+			font-size: 16px
+		span
+			font-size: 34px
+			font-weight: 700
+			@include mq($max-width: 700px)
+				font-size: 18px
+	ul
+		font: 300 21px/1.4 'Proxima', sans-serif
+		margin-bottom: 60px
+		@include mq($max-width: 700px)
+			font-size: 16px
+			margin-bottom: 20px
+		li
+			margin-bottom: 32px
+			@include mq($max-width: 700px)
+				margin-bottom: 10px
+			&::before
+				margin-right: 16px
+				color: $green2
+	.btns
+		padding-left: 15px
+		list-style-type: none
+		@include mq($max-width: 700px)
+			padding-left: 0
+	.price
+		color: $white
+		background: $green2
+		width: 180px
+		height: 180px
+		border-radius: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		z-index: 2
+		left: 50%
+		top: 50%
+		transform: translate(0, -50%)
+		animation: pulse3 2s infinite ease
+		@include mq($max-width: 1200px)
+			top: 100%
+			transform: translate(0, 0)
+		@include mq($max-width: 1000px)
+			right: 50px
+			left: auto
+			top: 90%
+		@include mq($max-width: 700px)
+			position: relative
+			transform: translate(0,0) !important
+			top: auto
+			right: auto
+			left: auto
+			bottom: auto
+			animation: none
+			border-radius: 0
+			border-top-left-radius: 50px
+			border-bottom-right-radius: 50px
+			width: 100%
+			height: auto
+			padding: 10px
+			font-size: 20px
+			margin-top: 15px
+		&::before
+			content: ''
+			position: absolute
+			display: block
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			animation: pulse 2s infinite ease
+			border: 1px solid $green2
+			border-radius: 100%
+			@include mq($max-width: 700px)
+				display: none
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			animation: pulse2 2s infinite ease
+			border: 1px solid $green2
+			border-radius: 100% 
+			@include mq($max-width: 700px)
+				display: none
+		&__text
+			text-align: center
+			font: 700 36px 'Proxima', sans-serif
+			@include mq($max-width: 700px)
+				font-size: 26px
+		&__num
+			font-size: 21px
+			color: $white
+			&:after
+				content: '\f158'
+				font-family: fontello
+				color: $white
+				font-size: 30px
+				margin-left: 10px
+				display: inline-block
+				@include mq($max-width: 700px)
+					font-size: 26px
+			span
+				color: $white
+				font-size: 34px
+				@include mq($max-width: 700px)
+					font-size: 28px
+	.packet
+		position: absolute
+		z-index: 2
+		right: 0
+		top: 50%
+		transform: translate(30%, -50%)
+		width: 420px
+		height: 420px
+		@include mq($max-width: 1500px)
+			width: 320px
+			height: 320px
+			transform: translate(0%, -50%)
+		@include mq($max-width: 1000px)
+			display: none
+		&::before
+			content: ''
+			position: absolute
+			display: block
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 420px
+			height: 420px
+			background: $blue
+			border-radius: 100%
+			@include mq($max-width: 1500px)
+				width: 320px
+				height: 320px
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			width: 420px
+			height: 420px
+			border-radius: 100%
+			box-shadow: 0px 0px 0px 15px $blue
+			animation: pulse4 2s infinite ease
+			@include mq($max-width: 1500px)
+				width: 320px
+				height: 320px
+		&__img
+			display: block
+			z-index: 3
+			position: absolute
+			left: 50%
+			top: 50%
+			width: 100%
+			transform: translate(-50%, -50%) rotate(15deg)
+
+@keyframes pulse
+	50%
+		opacity: 1
+		transform: scale(1)
+	100%
+		transform: scale(1.2)
+		opacity: 0
+@keyframes pulse2
+	25%
+		opacity: 1
+		transform: scale(1)
+	100%
+		transform: scale(1.25)
+		opacity: 0
+@keyframes pulse3
+	0%
+		transform: translate(0, -50%) scale(1)
+	50%
+		transform: translate(0, -50%) scale(1.05)
+	100%
+		transform: translate(0, -50%) scale(1)
+@keyframes pulse4
+	0%
+		transform: translate(-50%, -50%) scale(1)
+		opacity: 0
+	50%
+		transform: translate(-50%, -50%) scale(1.2)
+		opacity: 1
+	100%
+		transform: translate(-50%, -50%) scale(1)
+		opacity: 0

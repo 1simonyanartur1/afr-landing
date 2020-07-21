@@ -1,0 +1,66 @@
+.text-container
+	img
+		display: block
+		height: auto
+		max-width: 100%
+		@include mq($max-width: 1000px)
+			float: none !important
+		&::after
+			content: ''
+			display: block
+			clear: both
+	p
+		font: 400 17px/1.6 'Proxima', sans-serif
+		margin-bottom: 20px
+	sup
+			font-size: 12px
+	ul
+		li
+			list-style-type: disc
+	ul
+		padding-left: 20px
+		font: 400 17px/1.6 'Proxima', sans-serif
+		margin-bottom: 15px
+		@include mq($max-width: 700px)
+			font-size: 20px
+	h1
+		font: bold 26px/1.4 'Proxima', sans-serif
+		margin-bottom: 25px
+		@include mq($max-width: 700px)
+			font-size: 22px
+	h2
+		text-transform: uppercase
+		font: bold 25px/1.4 'Proxima', sans-serif
+		margin-bottom: 20px
+		@include mq($max-width: 700px)
+			font-size: 18px
+	h3
+		text-transform: uppercase
+		font: bold 21px/1.4 'Proxima', sans-serif
+		margin-bottom: 20px
+		@include mq($max-width: 700px)
+			font-size: 16px
+	h4
+		font: bold 17px/1.6 'Proxima', sans-serif
+		margin-bottom: 20px
+		@include mq($max-width: 700px)
+			font-size: 16px
+// 	a
+// 		font-weight: 700
+// 		color: $blue3
+// 		span
+// 			font-weight: 400
+// 	ol
+// 		li
+// 			list-style-type: decimal
+// 	ol,
+// 	h2
+// 		font: bold 22px/1.4 'Proxima', sans-serif
+// 		margin-bottom: 25px
+// 		@include mq($max-width: 700px)
+// 			font-size: 18px
+// 	p
+// 		font: 16px/1.4 'Proxima', sans-serif
+// 		margin-bottom: 15px
+// 		@include mq($max-width: 700px)
+// 			font-size: 14px

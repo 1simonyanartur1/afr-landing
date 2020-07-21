@@ -1,0 +1,87 @@
+.about
+	padding: 40px 0
+	background: url($imgUrl+'about/bg.png') no-repeat center center / cover
+	position: relative
+	.container
+		position: relative
+		z-index: 2
+	.cloud
+		position: absolute
+		top: 30%
+		left: 0
+		transform: translate(-50%, 0)
+		z-index: 1
+	.butterfly
+		position: absolute
+		top: 50%
+		z-index: 1
+		left: 0
+		@include mq($max-width: 1500px)
+			display: none
+	.text-container
+		margin-bottom: 40px
+	.line
+		margin-bottom: 40px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@include mq($max-width: 1000px)
+			flex-direction: column
+			margin-bottom: 20px
+		.text-container
+			margin-bottom: 0
+			width: 48%
+			@include mq($max-width: 1000px)
+				width: 100%
+	.video
+		width: 44%
+		position: relative
+		@include mq($max-width: 1000px)
+			width: 100%
+			margin-bottom: 25px
+		.icon-play
+			width: 97px
+			height: 97px
+			border-radius: 100%
+			background: $green2
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 40px
+			color: $white
+			transition: all .3s ease-out
+			&::before
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-35%, -50%)
+			&::after
+				content: ''
+				position: absolute
+				display: block
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				opacity: 0
+				animation: pulse2 2s infinite ease
+				border: 1px solid $green2
+				border-radius: 100%
+			&:hover
+				background: $blue2
+		&__img
+			display: block
+			width: 100%
+			height: auto
+	.btns
+		text-align: center
+	.icon-double-arrow
+		padding: 25px 0 0
+		font-size: 20px
+		&:before
+			color: $green2
+
