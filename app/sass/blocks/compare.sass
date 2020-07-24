@@ -49,6 +49,7 @@
 		border: 1px solid #DADADA
 		text-align: center
 		position: relative
+		color: $black
 		@include mq($max-width: 1000px)
 			width: 100%
 		&:before
@@ -73,8 +74,9 @@
 			position: relative
 			z-index: 4
 			@include mq($max-width: 1000px)
-				transform: scale(1)
+				transform: scale(1) !important
 				box-shadow: none
+				margin: 10px 0
 			.item__img
 				margin-bottom: -20px
 				max-width: 110%
@@ -118,3 +120,9 @@
 			padding: 0 41px 95px
 			@include mq($max-width: 1000px)
 				padding: 25px
+			h4
+				text-transform: none
+				@include mq($max-width: 550px)
+					margin-bottom: 10px
+			p
+				font-size: 13px

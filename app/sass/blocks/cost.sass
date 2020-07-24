@@ -31,14 +31,16 @@
 		justify-content: space-between
 		width: 48%
 		margin-bottom: 60px
+		color: $black
 		@include mq($max-width: 1000px)
 			width: 100%
 		&:hover
+			box-shadow: 2px 6px 52px rgba(0, 0, 0, 0.25)
 			.item-form
 				display: block
 		&-left,
 		&-right
-			width: 49%
+			width: 50%
 			padding: 0 25px
 			@include mq($max-width: 550px)
 				width: 100%
@@ -46,17 +48,24 @@
 			border-radius: 10px 10px 0px 0px
 			background: $green2
 			margin: -40px -25px 0 -25px
-			padding: 35px 70px 45px
+			padding: 35px 50px 45px
 			text-align: center
 			@include mq($max-width: 1200px)
 				padding: 25px 25px 40px
-			&+.item__img
+			&+.img-wrap
 				margin-top: -20px
+		.img-wrap
+			width: 100%
 		&__img
 			display: block
 			width: 100%
 			height: auto
+			transition: all .3s ease-out
 			margin-bottom: 10px
+			&:hover
+				opacity: .5
+			&+.item__subtitle
+				margin-bottom: 10px
 		&-price
 			text-align: center
 			padding: 25px 0
@@ -78,19 +87,25 @@
 					font-size: 18px
 		&__title
 			color: $white
-			top: 30px
 			font: 700 19px 'Proxima', sans-serif
+			position: relative
+			sup
+				position: absolute
+				right: 0px
+				top: -5px
+				text-transform: uppercase
+				font-size: 10px
 		.text-container
 			p
-				font-weight: 300
-				font-size: 14px
+				font-size: 13px
 		&-list
-			font: 300 14px/1.4 'Proxima', sans-serif
+			font: 400 13px/1.6 'Proxima', sans-serif
 			margin-bottom: 20px
 		&__subtitle2
 			font: 700 19px 'Proxima', sans-serif
 			text-align: center
 			margin: 10px 0
+			color: $gray5
 		&__subtitle
 			color: $green3
 			font: 700 14px 'Proxima', sans-serif

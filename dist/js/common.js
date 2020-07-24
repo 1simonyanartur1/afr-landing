@@ -12,6 +12,14 @@
 			slidesToScroll: 1,
 		});
 
+		$(document).on('click', '.anchor', function (e) {
+			var fixed_offset = 0;
+			$('html, body').stop().animate({
+				scrollTop: $(this.hash).offset().top - fixed_offset
+			}, 500);
+			e.preventDefault();
+		});
+
 		function basketCounter() {
 			var btnMinus = $('.counter .minus');
 			var btnPlus = $('.counter .plus');
